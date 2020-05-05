@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>水仙花数</title>
+</head>
+<body>
+    <script>
+      function cube(x){return x*x*x;};
+        var count = 0;
+        for (let i = 1; i <= 9; i++) {
+          for (let y = 0; y <= 9; y++) {
+            for (let x = 0; x <= 9; x++) {
+              var sum = i * 100 + y * 10 + x ;
+              if (sum == (cube(i)+cube(y)+cube(x))) {
+                count++;
+                document.write( sum + "<br>")
+              }  
+            }
+         
+          }
+        }
+        document.write(count);
+    </script>
+</body>
+</html>

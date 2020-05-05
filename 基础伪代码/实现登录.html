@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var x = prompt("请输入账号");
+    while (x != "admin") {
+      alert("您的账号不正确");
+      x = prompt("请再次输入账号");
+    }
+    if (x == "admin") {
+      var y = prompt("请输入密码");
+      while(y != "ab123"){
+        alert("您的密码不正确");
+        y = prompt("请再次输入密码");
+      }
+      if (y == "ab123") {
+        alert("登录成功")
+      }
+    }
+  </script>
+</body>
+</html>

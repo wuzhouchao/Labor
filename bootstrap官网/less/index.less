@@ -1,0 +1,263 @@
+html,body,ul,li,p,a{
+  margin: 0;
+  padding: 0;
+}
+ul,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+#header{
+  height: 50px;
+  width: 100%;
+  .navbar-default{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    border-radius: 0px;
+    border: none;
+    .container-fluid{
+      width: 90%;
+      margin: auto;
+      .navbar-nav{
+        float: none;
+        li{
+          &:hover a{
+            color: white;
+          }
+        }
+        .active{
+          a{
+            background-color: transparent;
+            color: #cccccc;
+          }
+        }
+        .float-right{
+          float: right;
+        }
+      }
+    }
+  }
+}
+#main{
+  width: 100%;
+  padding-bottom: 40px;
+  
+  .banner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    background: linear-gradient(45deg,#020031,#6d3353);
+    &::before{
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      display: block;
+      background: url(../image/bs-docs-masthead-pattern.png) repeat;
+      opacity: 0.4;
+      position: 50% 50%;
+      
+    }
+    h1{
+      color: white;
+      text-align: center;
+    }
+    h2{
+      color: white;
+      text-align: center;
+    }
+    .color{
+      box-shadow: 0 -2px 0 #44889c inset;
+      margin-bottom: 15px;
+      border: none;
+      font-size: 16px;
+    }
+    p{
+      color: rgb(182, 182, 182);
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+  .content{
+    width: 100%;
+    .title{
+      width: 80%;
+      margin: auto;
+      padding: 30px 0;
+      .wrap{
+        width: 60%;
+        border-bottom: 1px solid #cccccc;
+        padding: 15px 0;
+        margin: auto;
+        text-align: center;
+      }
+    }
+    .row{
+    width: 90%;
+    margin: auto;  
+      .items{
+        padding: 5px;
+        margin-bottom: 30px;
+        text-align: center;
+        border: 1px solid #cccccc;
+        .pic{
+          width: 100%;
+          img{
+            width: 100%;
+          }
+        }
+        .title-items{
+          width: 100%;
+          padding: 10px;
+          p{
+            font-size: 14px;
+            padding: 5px 0;
+          }
+          .font{
+            font-size: 12px;
+            
+          }
+        }
+      }
+    }
+  }
+}
+#footer{
+  border-top: 1px solid #cccccc;
+  padding: 30px 0;
+  .content-footer{
+    width: 90%;
+    margin: auto;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 15px;
+    .left{
+      margin-bottom: 15px;
+      div{
+        margin-bottom: 15px;
+      }
+      p{
+        color: #8f8f8f;
+      }
+    }
+    .right{
+      li{
+        
+        a{
+          color: #5a5a5a;
+        }
+        .font-lg{
+          display: block;
+          font-size: 20px;
+          margin-bottom: 15px;
+          color: #18a5cf;
+        }
+      }
+    }
+  }
+  .version{
+    text-align: center;
+    margin-top: 15px;
+    color: #cccccc;
+  }
+}
+#fixed-top{
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  a{
+    color: white;
+  }
+}
+@media screen and (max-width:1180px) and (min-width:765px)  {
+  #header{
+    .navbar-default{
+      .container-fluid{
+        width: 100%;
+      }
+      .navbar-header{
+        display: none;
+      }
+      .collapse{
+        .nav{
+          display: flex;
+          justify-content: space-between;
+          .float-right{
+            display: none;
+          }
+        }
+       
+      }
+      
+    }
+  }
+  #main{
+    h2{
+      font-size: 24px;
+    }
+  }
+}
+@media screen and (max-width:765px){
+  #header{
+    .navbar-default{
+      .container-fluid{
+        width: 100%;
+        .navbar-collapse{
+          border-color: transparent;
+        }
+        .navbar-nav{
+          float: left;
+          li{
+            &:hover a{
+              color: white;
+            }
+          }
+          .active{
+            a{
+              background-color: transparent;
+              color: #cccccc;
+            }
+          }
+          .float-right{
+            display: none;
+          }
+        }  
+      }
+    }
+  }
+  #main{
+    .banner{
+      h2{
+        font-size: 20px;
+      }
+    }
+    .content{
+      width: 100%;
+      .title{
+        width: 100%;
+        margin: auto;
+        padding: 30px 0;
+        .wrap{
+          width: 80%;
+          border-bottom: 1px solid #cccccc;
+          padding: 15px 0;
+          margin: auto;
+          text-align: center;
+          h2{
+            font-size: 20px;
+          }
+        }
+      }
+    }  
+  }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var a = prompt("请输入");
+    var code = a.charCodeAt(0);
+    //  ASCII数字编码区域0-9
+    if (code >= 48 && code <= 57) {
+      alert("您输入的是数字")
+    }else if(code >= 65 && code <= 90){
+      alert("您输入的是大写字母")
+    }else if (code >= 97 && code <= 122) {
+      alert("您输入的是小写字母")
+    }else{
+      alert("您输入的是符号")
+    }
+  </script>
+</body>
+</html>

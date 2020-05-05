@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var x = parseInt(prompt("请输入您所想计算的年份"));
+    if (x % 4 == 0 && x % 100 != 0) {
+      alert(x + "是闰年")
+    }else if(x % 400 == 0){
+      alert(x + "是闰年")
+    }else{
+      alert(x + "不是闰年")
+    }
+  </script>
+</body>
+</html>
